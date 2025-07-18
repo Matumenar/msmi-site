@@ -16,20 +16,19 @@ function App() {
           alt="Matias Menarguez Logo"
           className="h-[7rem] w-auto object-contain"
         />
-        <nav className="flex flex-wrap space-x-6 text-sm md:text-base">
+  <nav className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm md:text-base text-center mt-2 md:mt-0">
   <a href="#about" className="hover:underline">About Me</a>
   <a href="#recordings" className="hover:underline">I recorded drums on</a>
   <a href="#compositions" className="hover:underline">I composed</a>
   <a href="#contact" className="hover:underline">Hire me</a>
   <a href="#lessons" className="hover:underline">Private Lessons</a>
-  
 </nav>
       </header>
 
-      <section
-        className="relative h-[70vh] md:h-[80vh] bg-no-repeat bg-cover bg-center parallax"
-        style={{ backgroundImage: "url('/rack.jpg')" }}
-      >
+     <section
+  className="relative h-[80vh] bg-no-repeat bg-cover bg-center md:bg-center bg-[center_top_60%] parallax"
+  style={{ backgroundImage: "url('/rack.jpg')" }}
+>
         <div className="font-sans text-white absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4 animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white text-shadow-strong opacity-0 animate-fade-up delay-100">
             Matias Menarguez
