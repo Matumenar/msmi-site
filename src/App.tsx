@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { FaInstagram } from "react-icons/fa";
+
 
 function App() {
   return (
@@ -257,11 +259,21 @@ function App() {
 </section>
 
 
-          <footer className="py-8 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Matias Menarguez — All rights reserved.
-      </footer>
-    </div>
+<footer className="py-8 px-4 text-center text-gray-500 text-sm">
+  <p>© {new Date().getFullYear()} Matias Menarguez — All rights reserved.</p>
+
+  <div className="mt-4 flex justify-center">
+    <a
+      href="https://www.instagram.com/matumenar/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-pink-600 hover:text-pink-700 transition text-2xl"
+    >
+      <FaInstagram />
+    </a>
+  </div>
+</footer>
+</div>
   );
 }
-
 export default App;
