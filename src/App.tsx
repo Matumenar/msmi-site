@@ -4,26 +4,51 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { FaInstagram } from "react-icons/fa";
-
+import { useState } from 'react';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Navbar */}
-      <header className="bg-black text-white flex items-center justify-center gap-8 px-6 py-4">
+        <header className="relative bg-black text-white flex items-center justify-center gap-8 px-6 py-4">
         <img
           src="/logo.png"
           alt="Matias Menarguez Logo"
           className="h-[7rem] w-auto object-contain"
         />
-  <nav className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm md:text-base text-center mt-2 md:mt-0">
+ <nav className="hidden md:flex flex-wrap space-x-4 text-sm md:text-base">
   <a href="#about" className="hover:underline">About Me</a>
+  <span className="hidden md:inline">|</span>
   <a href="#recordings" className="hover:underline">I recorded drums on</a>
+  <span className="hidden md:inline">|</span>
   <a href="#compositions" className="hover:underline">I composed</a>
+  <span className="hidden md:inline">|</span>
   <a href="#contact" className="hover:underline">Hire me</a>
+  <span className="hidden md:inline">|</span>
   <a href="#lessons" className="hover:underline">Private Lessons</a>
 </nav>
+
+{/* Mobile Menu Button */}
+<div className="md:hidden ml-auto">
+  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none">
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
+
       </header>
+{isMenuOpen && (
+  <div className="md:hidden animate-fade-in absolute top-[100px] left-0 w-full bg-black text-white flex flex-col items-center gap-4 py-4 z-50">
+    <a href="#about" className="hover:underline">About Me</a>
+    <a href="#recordings" className="hover:underline">I recorded drums on</a>
+    <a href="#compositions" className="hover:underline">I composed</a>
+    <a href="#contact" className="hover:underline">Hire me</a>
+    <a href="#lessons" className="hover:underline">Private Lessons</a>
+  </div>
+)}
+
 
      <section
   className="relative h-[80vh] bg-no-repeat bg-cover bg-center md:bg-center bg-[center_top_60%] parallax"
