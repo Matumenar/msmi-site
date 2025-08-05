@@ -53,19 +53,23 @@ function App() {
 )}
 
 
-     <section
-  className="relative h-[80vh] bg-no-repeat bg-cover bg-center md:bg-center bg-[center_top_60%] parallax"
-  style={{ backgroundImage: "url('/rack2.jpg')" }}
+<section
+  className="relative h-[80vh] bg-no-repeat bg-cover bg-center md:bg-center parallax"
+  style={{
+    backgroundImage: "url('/rack2.jpg')",
+    backgroundPosition: "center top",
+    backgroundSize: "cover",
+  }}
 >
-        <div className="font-sans text-white absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4 animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white text-shadow-strong opacity-0 animate-fade-up delay-100">
-            Matias Menarguez
-          </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 text-shadow-strong opacity-0 animate-fade-up delay-300">
-            Drummer, Mixer & Producer working remotely for artists around the world.
-          </p>
-        </div>
-      </section>
+  <div className="font-sans text-white absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4 animate-fade-up">
+    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white text-shadow-strong opacity-0 animate-fade-up delay-100">
+      Matias Menarguez
+    </h1>
+    <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 text-shadow-strong opacity-0 animate-fade-up delay-300">
+      Drummer, Mixer & Producer working remotely for artists around the world.
+    </p>
+  </div>
+</section>
 
       <section className="bg-gray-900 text-white py-16 px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Artists Say</h2>
@@ -188,26 +192,26 @@ function App() {
   </div>
 
 {/* Loosely Spread Polaroid Images */}
-<div className="md:w-1/2 relative h-[480px] md:h-[550px] w-full flex items-center justify-center">
-  {/* Bottom Left – polarack */}
+<div className="md:w-1/2 relative h-[480px] md:h-[550px] w-full flex items-center justify-center overflow-visible">
+  {/* Bottom – polarack */}
   <img
     src="/polarack.png"
     alt="Polaroid Rack"
-    className="absolute w-[70%] max-w-[300px] rotate-[-8deg] shadow-xl z-10 top-28 left-[5%]"
+    className="absolute w-[70%] max-w-[240px] rotate-[-8deg] shadow-xl z-10 top-28 left-[5%] sm:left-[10%] md:left-[10%]"
   />
   
-  {/* Top Right – poladesk */}
+  {/* Middle – poladesk */}
   <img
     src="/poladesk.png"
     alt="Polaroid Desk"
-    className="absolute w-[70%] max-w-[300px] rotate-[8deg] shadow-xl z-20 top-4 left-[53%]"
+    className="absolute w-[70%] max-w-[240px] rotate-[6deg] shadow-xl z-20 top-4 left-[25%] sm:left-[30%] md:left-[30%]"
   />
 
-  {/* Center Front – poladrums */}
+  {/* Top – poladrums */}
   <img
     src="/poladrums.png"
     alt="Polaroid Drums"
-    className="absolute w-[70%] max-w-[300px] rotate-[30deg] shadow-2xl z-30 top-[110px] left-[95%]"
+    className="absolute w-[70%] max-w-[240px] rotate-[20deg] shadow-2xl z-30 top-[110px] left-[45%] sm:left-[55%] md:left-[55%]"
   />
 </div>
   </div>
