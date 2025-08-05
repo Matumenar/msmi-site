@@ -54,15 +54,15 @@ function App() {
 
 
 <section
-  className="relative h-[80vh] bg-no-repeat bg-cover bg-center md:bg-center parallax"
-  style={{
-    backgroundImage: "url('/rack2.jpg')",
-    backgroundPosition: "center top",
-    backgroundSize: "cover",
-  }}
+  className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] bg-black"
 >
-  <div className="font-sans text-white absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4 animate-fade-up">
-    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white text-shadow-strong opacity-0 animate-fade-up delay-100">
+  <div
+    className="absolute inset-0 bg-cover bg-center sm:bg-top md:bg-center"
+    style={{ backgroundImage: "url('/rack2.jpg')" }}
+  ></div>
+
+  <div className="relative z-10 font-sans text-white flex flex-col justify-center items-center text-center px-4 h-full bg-black/60 animate-fade-up">
+    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-shadow-strong opacity-0 animate-fade-up delay-100">
       Matias Menarguez
     </h1>
     <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 text-shadow-strong opacity-0 animate-fade-up delay-300">
@@ -70,6 +70,7 @@ function App() {
     </p>
   </div>
 </section>
+
 
       <section className="bg-gray-900 text-white py-16 px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Artists Say</h2>
