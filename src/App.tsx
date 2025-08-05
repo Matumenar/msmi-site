@@ -20,6 +20,8 @@ function App() {
  <nav className="hidden md:flex flex-wrap space-x-4 text-sm md:text-base">
   <a href="#about" className="hover:underline">About Me</a>
   <span className="hidden md:inline">|</span>
+  <a href="#gear" className="hover:underline">Gear</a>
+  <span className="hidden md:inline">|</span>
   <a href="#recordings" className="hover:underline">I recorded drums on</a>
   <span className="hidden md:inline">|</span>
   <a href="#compositions" className="hover:underline">I composed</a>
@@ -42,6 +44,7 @@ function App() {
 {isMenuOpen && (
   <div className="md:hidden animate-fade-in absolute top-[100px] left-0 w-full bg-black text-white flex flex-col items-center gap-4 py-4 z-50">
     <a href="#about" className="hover:underline">About Me</a>
+    <a href="#gear" className="hover:underline">Gear</a>
     <a href="#recordings" className="hover:underline">I recorded drums on</a>
     <a href="#compositions" className="hover:underline">I composed</a>
     <a href="#contact" className="hover:underline">Hire me</a>
@@ -52,7 +55,7 @@ function App() {
 
      <section
   className="relative h-[80vh] bg-no-repeat bg-cover bg-center md:bg-center bg-[center_top_60%] parallax"
-  style={{ backgroundImage: "url('/rack.jpg')" }}
+  style={{ backgroundImage: "url('/rack2.jpg')" }}
 >
         <div className="font-sans text-white absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4 animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white text-shadow-strong opacity-0 animate-fade-up delay-100">
@@ -161,8 +164,57 @@ function App() {
   </div>
 </section>
 
+<section id="gear" className="bg-gray-900 text-white py-20 px-6">
+  <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-12">
+    
+    {/* Text on the left */}
+    <div className="md:w-1/2 flex flex-col justify-center space-y-4 text-left">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Recording Gear</h2>
+      <ul className="list-disc list-inside space-y-2 text-lg text-gray-300">
+      <li>Universal Audio Apollo x8p</li>
+      <li>Audient ASP880</li>
+      <li>Kultrumm TAB V376 Preamps</li>
+      <li>Neve / API preamps emulation through UA</li>
+      <li>Gretsch Round Badge</li>
+      <li>Gretsch Jazz</li>
+      <li>Vintage Ludwig & Ludwig snare drum '46</li>
+      <li>Ludwig Acrophonic snare drum</li>
+      <li>Gretsch snares</li>
+      <li>Various cymbals (vintage & modern) - Zildjian, Ottaviano, Bosphorus, Marcus, etc.</li>
+      <li>Various high-end mics (Lauten, AT, Shure, AKG, PBM, etc.)</li>
+      <li>Wide variety of high-end VSTs</li>
+      <li>Luna DAW</li>
+    </ul>
+  </div>
 
-<section id="recordings" className="py-20 px-6 bg-gray-900 text-white relative">
+{/* Loosely Spread Polaroid Images */}
+<div className="md:w-1/2 relative h-[480px] md:h-[550px] w-full flex items-center justify-center">
+  {/* Bottom Left – polarack */}
+  <img
+    src="/polarack.png"
+    alt="Polaroid Rack"
+    className="absolute w-[70%] max-w-[300px] rotate-[-8deg] shadow-xl z-10 top-28 left-[5%]"
+  />
+  
+  {/* Top Right – poladesk */}
+  <img
+    src="/poladesk.png"
+    alt="Polaroid Desk"
+    className="absolute w-[70%] max-w-[300px] rotate-[8deg] shadow-xl z-20 top-4 left-[53%]"
+  />
+
+  {/* Center Front – poladrums */}
+  <img
+    src="/poladrums.png"
+    alt="Polaroid Drums"
+    className="absolute w-[70%] max-w-[300px] rotate-[30deg] shadow-2xl z-30 top-[110px] left-[95%]"
+  />
+</div>
+  </div>
+</section>
+
+
+<section id="recordings" className="py-20 px-6 bg-black text-white relative">
   <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Recordings</h2>
 
   <div className="relative max-w-[700px] mx-auto w-full">
@@ -189,7 +241,7 @@ function App() {
   </div>
 </section>
 
-<section id="compositions" className="py-20 px-6 bg-black text-white">
+<section id="compositions" className="py-20 px-6 bg-gray-900 text-white">
   <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Compositions</h2>
   <div className="max-w-[700px] mx-auto w-full">
     <iframe 
@@ -204,7 +256,7 @@ function App() {
   </div>
 </section>
 
-<section id="contact" className="py-20 px-6 bg-gray-900 text-white">
+<section id="contact" className="py-20 px-6 bg-black text-white">
   <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-center justify-between gap-10 h-full">
 
     {/* Polaroid Image on the Left */}
@@ -253,7 +305,7 @@ function App() {
 </section>
 
 {/* Lessons */}
-<section id="lessons" className="py-20 px-6 bg-black">
+<section id="lessons" className="py-20 px-6 bg-gray-900">
   <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
     {/* Text on the left */}
